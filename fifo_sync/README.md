@@ -1,17 +1,22 @@
-A parameterized synchronous FIFO implementation in Verilog.
+# Synchronous FIFO
 
-The design supports:
+## Description
+Parameterized synchronous FIFO supporting non-power-of-two depths.
 
- - configurable data width
+## Features
+- Parameterized depth and width
+- Full capacity utilization
+- Wrap-bit pointer scheme
+- Simultaneous read/write support
+- Self-checking testbench
 
- - configurable depth (including non-power-of-2 depths)
+## Files
 
- - full capacity utilization (no wasted entry)
+rtl/fifo_sync.sv
+    FIFO implementation
 
- - safe handling of simultaneous read and write
+tb/tb_fifo_sync.sv
+    Self-checking SystemVerilog testbench
 
- - simple and synthesizable control logic
-
-The FIFO uses pointer comparison with an additional wrap bit to distinguish full vs empty conditions.
-
-Both read and write operations occur on the same clock domain, making this a synchronous FIFO.
+sim/run_sim.sh
+    Example simulation script
