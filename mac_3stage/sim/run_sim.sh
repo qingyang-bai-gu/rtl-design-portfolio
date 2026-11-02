@@ -13,7 +13,7 @@ vcs -full64 -licqueue \
 +warn=all \
 -sverilog \
 ../rtl/mac_3stage.sv \
-../tb/mac_3stage_tb.sv
+../tb/tb_mac_3stage.sv
 
 echo "Running simulation..."
 

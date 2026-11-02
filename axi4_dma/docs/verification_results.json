@@ -1,0 +1,1839 @@
+{
+  "versions": {
+    "python": "Python 3.10.7",
+    "iverilog": "Icarus Verilog version 13.0 (stable) (v13_0)",
+    "vvp": "Icarus Verilog runtime version 13.0 (stable) (v13_0)"
+  },
+  "stage": "all",
+  "passed": true,
+  "source_sha256": {
+    "rtl/axi_dma.sv": "685c79020aca83473749253cf164010035f6c46bb02da5159f9e1b7a7e111f77",
+    "rtl/axi_dma_cdc.sv": "a7e62662db80baa92951c0144926826b1684df60b5271597a0ea5a241c4d9058",
+    "rtl/axi_dma_multi.sv": "d7acfcc26c71f5d8279932d327155fdcdae9fdf61a54095fc97c517aecd7155a",
+    "rtl/cdc_bit_sync.sv": "13f381fbf1d1d8beff740448ec9ce6d9c5d05e829dbe513ec8a72ca189e8504a",
+    "rtl/dma_async_fifo.sv": "c01cfdc7d2ea466c4bea48b651b215efc862296a60e9fce1f3810616bf7e0e71",
+    "rtl/dma_burst_buffer.sv": "8c847036de49c78933c540238542bf5b2da79468eb8d74f082d7516213d57c44",
+    "rtl/dma_burst_planner.sv": "1ffd0f896e741f6beb983d32412683e2823d73901a902d5a5250be97ba928c46",
+    "rtl/dma_checks.svh": "5c2ac5eca7568b68d28507490c6b515f5c4c645eb87f9098a443d18cdca6dc25",
+    "rtl/dma_controller.sv": "4703a5ddd0af6373162923c268c096578ded8582e30780dfe9bcb223a57e040b",
+    "rtl/dma_performance_counters.sv": "0f82fbae7333aecf481e8e530e4e3398c41df4bda50b20be6f24d2124d92de18",
+    "rtl/dma_read_engine.sv": "70cd754b2a0888071775cc04aeaaa2fdea9bd85e9041dd80c7b14c4979755084",
+    "rtl/dma_write_engine.sv": "5592e6f0ae69ecac0354fbae9d0c0842c4f841caca00e51916b55de451e9657e",
+    "rtl/reset_sync.sv": "b49f5212c98ce9febd684e2860efaf9e3967312594c6458e0008ea9b6c0c84b6",
+    "rtl/round_robin_arbiter.sv": "97be308aac8cbcc4ce07a856776c43a4ff7abdf5bf0121b63dd49e07f8834961",
+    "tb/axi_memory_model.sv": "28200f77f2d80ff703e432318578df2ded3f8acad0ca1269ebdc8aa3134ca508",
+    "tb/rv_stability.sv": "b2e5d7246a95e6f15fbc9312b8915fe56ad839e34ed335e9bcff41b89826f656",
+    "tb/tb_arbiter.sv": "c5c7d4826f7f5fcaa6ea24b534c3e77af6cfa1990838d1066ae370d12b074327",
+    "tb/tb_arbiter_elaboration.sv": "a2c24c9145c0611b91033d0c4ef1d3e1194c0595cc93d71f9182c65000fa1af8",
+    "tb/tb_async_fifo.sv": "c102b969a3a0de18df1708c860a1bec49c086fa11a3ab1bf3b6e70ee8a4db806",
+    "tb/tb_buffer.sv": "f36be6a1b612fb44a0b2ee63ed2edcb9b38076b90b1d20ea3bdbf517cb67aaba",
+    "tb/tb_controller.sv": "8cd48cad682aa04fc169ceee53436e0f9b32c23a1db4143ae9147767c5488d75",
+    "tb/tb_counters.sv": "3833c0fcd1365c339853bc42684f397ffd497701f40c0098e283d7dd9ca01c0e",
+    "tb/tb_extension_parameters.sv": "9767337a542986029c8bb558b50b9c4c7af9208ebd5efb286444edfd4cab65b4",
+    "tb/tb_memory.sv": "f5bbe9528d9c37df78bb6de18c1d3e2b69d20c2e49873be0e01d4b4775f3621e",
+    "tb/tb_multi.sv": "9ef1a031ba75edca8dfcdf458e8d9b4ec8280f436041849f3aef1c0310b4a76e",
+    "tb/tb_parameters.sv": "1ac9b1443cb97ea43c3266b28cce620f51e2cc3de57279cb4fc6637ea1f6e1a6",
+    "tb/tb_planner.sv": "6e0ca8f84eb512709945265f32115fc09f5ce0e58ef80def0c059e7e79ca7119",
+    "tb/tb_read.sv": "9bcdb9c7dc7c399a48e51d2ff0bbd2acd4e5a82106388b503c8f3ee70a9f0d69",
+    "tb/tb_rv_stability.sv": "b93efb890a8e980fcee7ff2299161bbe157077c6c8e64734e312b7f781c89b5a",
+    "tb/tb_synchronizers.sv": "6b7b4de820add1ee9f3f9a986639f3021caae3541b7bfc8f96dd5b7120b44b3b",
+    "tb/tb_system.sv": "4e828281391c737fa53192b135044f82383dc6213ae0ac265bd5fd5f4bae5063",
+    "tb/tb_write.sv": "cd440cf9a91f86232776dcc3b2330ef0fcd6f849ece20ec93ea9c69f84a1e78c",
+    "model/performance.py": "a5576665416e3db050d0fdac787a765293d3406f67570b8a0cb7abe2adbd03a5",
+    "model/planner.py": "07aa156e79079a1be89e0870efd24f3cc8d5aecf51fb92b1d9b8ddf7018c44c5",
+    "model/test_performance.py": "2a1ce841e6e95638000616a97e5f88f669bc10368df0185ffc0bf2eb036ac52c",
+    "model/test_planner.py": "d2101c8bf216934d5ed532f07442291b900256586862e95d1216afedf7e0813b",
+    "scripts/quality.py": "af45614302aa457ac85d5e708500b057b7e15ba272ec398b856c8ea81c7b74c9",
+    "scripts/regress.py": "39b34abfbaae64a282f659a4d6cda07b76e8416969f23a2e144c918a5ad281bc"
+  },
+  "results": [
+    {
+      "name": "reference",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.159
+    },
+    {
+      "name": "vectors",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.377
+    },
+    {
+      "name": "planner_32_128_16_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.069
+    },
+    {
+      "name": "planner_32_128_16",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.225
+    },
+    {
+      "name": "planner_12_8_1_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.039
+    },
+    {
+      "name": "planner_12_8_1",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.075
+    },
+    {
+      "name": "planner_64_1024_256_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.041
+    },
+    {
+      "name": "planner_64_1024_256",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.026
+    },
+    {
+      "name": "planner_64_8_256_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.038
+    },
+    {
+      "name": "planner_64_8_256",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.11
+    },
+    {
+      "name": "planner_12_1024_3_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.044
+    },
+    {
+      "name": "planner_12_1024_3",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.023
+    },
+    {
+      "name": "read_32_128_16_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.042
+    },
+    {
+      "name": "read_32_128_16",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.032
+    },
+    {
+      "name": "read_12_8_1_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.043
+    },
+    {
+      "name": "read_12_8_1",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.03
+    },
+    {
+      "name": "read_64_1024_256_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.044
+    },
+    {
+      "name": "read_64_1024_256",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.038
+    },
+    {
+      "name": "read_64_8_256_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.046
+    },
+    {
+      "name": "read_64_8_256",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.047
+    },
+    {
+      "name": "write_32_128_16_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.042
+    },
+    {
+      "name": "write_32_128_16",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.043
+    },
+    {
+      "name": "write_12_8_1_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.045
+    },
+    {
+      "name": "write_12_8_1",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.036
+    },
+    {
+      "name": "write_64_1024_256_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.046
+    },
+    {
+      "name": "write_64_1024_256",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.05
+    },
+    {
+      "name": "write_64_8_256_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.042
+    },
+    {
+      "name": "write_64_8_256",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.055
+    },
+    {
+      "name": "buffer_1_128_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.041
+    },
+    {
+      "name": "buffer_1_128",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.243
+    },
+    {
+      "name": "buffer_3_128_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.04
+    },
+    {
+      "name": "buffer_3_128",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.265
+    },
+    {
+      "name": "buffer_4_128_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.039
+    },
+    {
+      "name": "buffer_4_128",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.386
+    },
+    {
+      "name": "buffer_5_128_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.066
+    },
+    {
+      "name": "buffer_5_128",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.467
+    },
+    {
+      "name": "buffer_16_128_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.052
+    },
+    {
+      "name": "buffer_16_128",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.27
+    },
+    {
+      "name": "buffer_1_1_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.042
+    },
+    {
+      "name": "buffer_1_1",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.21
+    },
+    {
+      "name": "buffer_5_1024_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.042
+    },
+    {
+      "name": "buffer_5_1024",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.37
+    },
+    {
+      "name": "buffer_reject_zero_depth_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.039
+    },
+    {
+      "name": "buffer_reject_zero_depth",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.022
+    },
+    {
+      "name": "buffer_reject_zero_width_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.038
+    },
+    {
+      "name": "buffer_reject_zero_width",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.022
+    },
+    {
+      "name": "controller_32_128_16_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.044
+    },
+    {
+      "name": "controller_32_128_16",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.029
+    },
+    {
+      "name": "controller_12_8_1_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.047
+    },
+    {
+      "name": "controller_12_8_1",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.028
+    },
+    {
+      "name": "controller_64_1024_256_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.044
+    },
+    {
+      "name": "controller_64_1024_256",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.029
+    },
+    {
+      "name": "memory_8_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.046
+    },
+    {
+      "name": "memory_8",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 1.289
+    },
+    {
+      "name": "memory_128_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.051
+    },
+    {
+      "name": "memory_128",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 1.461
+    },
+    {
+      "name": "memory_1024_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.057
+    },
+    {
+      "name": "memory_1024",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 1.385
+    },
+    {
+      "name": "system_32_128_16_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.092
+    },
+    {
+      "name": "system_32_128_16",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 6.792
+    },
+    {
+      "name": "system_12_8_1_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.089
+    },
+    {
+      "name": "system_12_8_1",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.961
+    },
+    {
+      "name": "system_64_1024_256_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.069
+    },
+    {
+      "name": "system_64_1024_256",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 7.764
+    },
+    {
+      "name": "system_32_128_3_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.067
+    },
+    {
+      "name": "system_32_128_3",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 5.731
+    },
+    {
+      "name": "parameter_reject_0_0_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.05
+    },
+    {
+      "name": "parameter_reject_0_0",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.022
+    },
+    {
+      "name": "parameter_reject_0_1_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.045
+    },
+    {
+      "name": "parameter_reject_0_1",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.021
+    },
+    {
+      "name": "parameter_reject_0_2_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.05
+    },
+    {
+      "name": "parameter_reject_0_2",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.024
+    },
+    {
+      "name": "parameter_reject_0_3_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.05
+    },
+    {
+      "name": "parameter_reject_0_3",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.024
+    },
+    {
+      "name": "parameter_reject_0_4_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.046
+    },
+    {
+      "name": "parameter_reject_0_4",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.022
+    },
+    {
+      "name": "parameter_reject_0_5_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.073
+    },
+    {
+      "name": "parameter_reject_0_5",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.024
+    },
+    {
+      "name": "parameter_reject_0_6_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.046
+    },
+    {
+      "name": "parameter_reject_0_6",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.023
+    },
+    {
+      "name": "parameter_reject_0_7_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.051
+    },
+    {
+      "name": "parameter_reject_0_7",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.023
+    },
+    {
+      "name": "parameter_reject_1_0_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.055
+    },
+    {
+      "name": "parameter_reject_1_0",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.022
+    },
+    {
+      "name": "parameter_reject_1_1_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.064
+    },
+    {
+      "name": "parameter_reject_1_1",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.025
+    },
+    {
+      "name": "parameter_reject_1_2_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.052
+    },
+    {
+      "name": "parameter_reject_1_2",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.028
+    },
+    {
+      "name": "parameter_reject_1_3_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.053
+    },
+    {
+      "name": "parameter_reject_1_3",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.023
+    },
+    {
+      "name": "parameter_reject_1_4_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.05
+    },
+    {
+      "name": "parameter_reject_1_4",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.023
+    },
+    {
+      "name": "parameter_reject_1_5_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.057
+    },
+    {
+      "name": "parameter_reject_1_5",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.023
+    },
+    {
+      "name": "parameter_reject_1_6_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.048
+    },
+    {
+      "name": "parameter_reject_1_6",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.024
+    },
+    {
+      "name": "parameter_reject_1_7_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.046
+    },
+    {
+      "name": "parameter_reject_1_7",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.023
+    },
+    {
+      "name": "parameter_reject_2_0_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.047
+    },
+    {
+      "name": "parameter_reject_2_0",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.023
+    },
+    {
+      "name": "parameter_reject_2_1_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.048
+    },
+    {
+      "name": "parameter_reject_2_1",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.024
+    },
+    {
+      "name": "parameter_reject_2_2_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.053
+    },
+    {
+      "name": "parameter_reject_2_2",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.026
+    },
+    {
+      "name": "parameter_reject_2_3_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.05
+    },
+    {
+      "name": "parameter_reject_2_3",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.025
+    },
+    {
+      "name": "parameter_reject_2_4_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.045
+    },
+    {
+      "name": "parameter_reject_2_4",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.022
+    },
+    {
+      "name": "parameter_reject_2_5_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.052
+    },
+    {
+      "name": "parameter_reject_2_5",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.023
+    },
+    {
+      "name": "parameter_reject_2_6_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.045
+    },
+    {
+      "name": "parameter_reject_2_6",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.025
+    },
+    {
+      "name": "parameter_reject_2_7_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.051
+    },
+    {
+      "name": "parameter_reject_2_7",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.029
+    },
+    {
+      "name": "parameter_reject_4_0_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.048
+    },
+    {
+      "name": "parameter_reject_4_0",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.023
+    },
+    {
+      "name": "parameter_reject_4_1_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.045
+    },
+    {
+      "name": "parameter_reject_4_1",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.022
+    },
+    {
+      "name": "parameter_reject_4_2_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.047
+    },
+    {
+      "name": "parameter_reject_4_2",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.024
+    },
+    {
+      "name": "parameter_reject_4_3_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.047
+    },
+    {
+      "name": "parameter_reject_4_3",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.022
+    },
+    {
+      "name": "parameter_reject_4_4_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.048
+    },
+    {
+      "name": "parameter_reject_4_4",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.023
+    },
+    {
+      "name": "parameter_reject_4_5_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.05
+    },
+    {
+      "name": "parameter_reject_4_5",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.022
+    },
+    {
+      "name": "parameter_reject_4_6_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.045
+    },
+    {
+      "name": "parameter_reject_4_6",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.022
+    },
+    {
+      "name": "parameter_reject_4_7_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.046
+    },
+    {
+      "name": "parameter_reject_4_7",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.024
+    },
+    {
+      "name": "parameter_reject_5_0_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.056
+    },
+    {
+      "name": "parameter_reject_5_0",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.026
+    },
+    {
+      "name": "parameter_reject_5_1_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.052
+    },
+    {
+      "name": "parameter_reject_5_1",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.027
+    },
+    {
+      "name": "parameter_reject_5_2_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.055
+    },
+    {
+      "name": "parameter_reject_5_2",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.025
+    },
+    {
+      "name": "parameter_reject_5_3_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.052
+    },
+    {
+      "name": "parameter_reject_5_3",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.025
+    },
+    {
+      "name": "parameter_reject_5_4_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.053
+    },
+    {
+      "name": "parameter_reject_5_4",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.027
+    },
+    {
+      "name": "parameter_reject_5_5_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.053
+    },
+    {
+      "name": "parameter_reject_5_5",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.029
+    },
+    {
+      "name": "parameter_reject_5_6_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.054
+    },
+    {
+      "name": "parameter_reject_5_6",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.025
+    },
+    {
+      "name": "parameter_reject_5_7_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.066
+    },
+    {
+      "name": "parameter_reject_5_7",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.027
+    },
+    {
+      "name": "parameter_reject_1_ID_WIDTH_0_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.044
+    },
+    {
+      "name": "parameter_reject_1_ID_WIDTH_0",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.022
+    },
+    {
+      "name": "parameter_reject_2_ID_WIDTH_0_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.049
+    },
+    {
+      "name": "parameter_reject_2_ID_WIDTH_0",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.023
+    },
+    {
+      "name": "parameter_reject_4_TAG_WIDTH_0_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.048
+    },
+    {
+      "name": "parameter_reject_4_TAG_WIDTH_0",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.023
+    },
+    {
+      "name": "parameter_reject_5_ID_WIDTH_0_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.056
+    },
+    {
+      "name": "parameter_reject_5_ID_WIDTH_0",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.032
+    },
+    {
+      "name": "parameter_reject_5_TAG_WIDTH_0_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.056
+    },
+    {
+      "name": "parameter_reject_5_TAG_WIDTH_0",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.027
+    },
+    {
+      "name": "parameter_reject_5_DEPTH_15_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.055
+    },
+    {
+      "name": "parameter_reject_5_DEPTH_15",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.028
+    },
+    {
+      "name": "parameter_reject_5_DEPTH_0_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.053
+    },
+    {
+      "name": "parameter_reject_5_DEPTH_0",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.028
+    },
+    {
+      "name": "memory_parameter_reject_0_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.049
+    },
+    {
+      "name": "memory_parameter_reject_0",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.024
+    },
+    {
+      "name": "memory_parameter_reject_1_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.041
+    },
+    {
+      "name": "memory_parameter_reject_1",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.026
+    },
+    {
+      "name": "memory_parameter_reject_2_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.042
+    },
+    {
+      "name": "memory_parameter_reject_2",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.023
+    },
+    {
+      "name": "memory_parameter_reject_3_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.04
+    },
+    {
+      "name": "memory_parameter_reject_3",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.023
+    },
+    {
+      "name": "memory_parameter_reject_4_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.041
+    },
+    {
+      "name": "memory_parameter_reject_4",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.025
+    },
+    {
+      "name": "memory_parameter_reject_5_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.041
+    },
+    {
+      "name": "memory_parameter_reject_5",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.024
+    },
+    {
+      "name": "memory_parameter_reject_6_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.04
+    },
+    {
+      "name": "memory_parameter_reject_6",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.023
+    },
+    {
+      "name": "memory_parameter_reject_7_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.04
+    },
+    {
+      "name": "memory_parameter_reject_7",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.022
+    },
+    {
+      "name": "arbiter_elaboration_1_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.036
+    },
+    {
+      "name": "arbiter_elaboration_1",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.022
+    },
+    {
+      "name": "arbiter_elaboration_3_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.045
+    },
+    {
+      "name": "arbiter_elaboration_3",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.039
+    },
+    {
+      "name": "arbiter_elaboration_4_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.037
+    },
+    {
+      "name": "arbiter_elaboration_4",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.023
+    },
+    {
+      "name": "arbiter_elaboration_5_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.035
+    },
+    {
+      "name": "arbiter_elaboration_5",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.023
+    },
+    {
+      "name": "arbiter_elaboration_reject_zero_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.041
+    },
+    {
+      "name": "arbiter_elaboration_reject_zero",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.024
+    },
+    {
+      "name": "rv_monitor_0_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.039
+    },
+    {
+      "name": "rv_monitor_0",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.023
+    },
+    {
+      "name": "rv_monitor_1_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.04
+    },
+    {
+      "name": "rv_monitor_1",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.021
+    },
+    {
+      "name": "rv_monitor_2_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.04
+    },
+    {
+      "name": "rv_monitor_2",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.022
+    },
+    {
+      "name": "rv_monitor_3_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.039
+    },
+    {
+      "name": "rv_monitor_3",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.022
+    },
+    {
+      "name": "rv_monitor_4_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.038
+    },
+    {
+      "name": "rv_monitor_4",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.023
+    },
+    {
+      "name": "rv_monitor_5_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.038
+    },
+    {
+      "name": "rv_monitor_5",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.023
+    },
+    {
+      "name": "rv_monitor_6_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.039
+    },
+    {
+      "name": "rv_monitor_6",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.03
+    },
+    {
+      "name": "arbiter_1_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.039
+    },
+    {
+      "name": "arbiter_1",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.111
+    },
+    {
+      "name": "arbiter_3_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.041
+    },
+    {
+      "name": "arbiter_3",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.215
+    },
+    {
+      "name": "arbiter_4_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.04
+    },
+    {
+      "name": "arbiter_4",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.27
+    },
+    {
+      "name": "arbiter_5_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.038
+    },
+    {
+      "name": "arbiter_5",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.282
+    },
+    {
+      "name": "arbiter_8_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.039
+    },
+    {
+      "name": "arbiter_8",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.4
+    },
+    {
+      "name": "arbiter_withdrawal_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.044
+    },
+    {
+      "name": "arbiter_withdrawal",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.025
+    },
+    {
+      "name": "multi_4_32_128_16_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.091
+    },
+    {
+      "name": "multi_4_32_128_16",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 8.925
+    },
+    {
+      "name": "multi_3_32_128_3_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.097
+    },
+    {
+      "name": "multi_3_32_128_3",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 10.169
+    },
+    {
+      "name": "multi_1_12_8_1_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.089
+    },
+    {
+      "name": "multi_1_12_8_1",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 1.475
+    },
+    {
+      "name": "multi_5_64_1024_256_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.101
+    },
+    {
+      "name": "multi_5_64_1024_256",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 12.293
+    },
+    {
+      "name": "multi_queue_depths_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.11
+    },
+    {
+      "name": "multi_queue_depths",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 8.46
+    },
+    {
+      "name": "multi_zero_delay_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.103
+    },
+    {
+      "name": "multi_zero_delay",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 6.909
+    },
+    {
+      "name": "multi_delays_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.102
+    },
+    {
+      "name": "multi_delays",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 9.06
+    },
+    {
+      "name": "cdc_4_4_3_5_1_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.111
+    },
+    {
+      "name": "cdc_4_4_3_5_1",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 16.178
+    },
+    {
+      "name": "cdc_3_2_7_2_3_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.125
+    },
+    {
+      "name": "cdc_3_2_7_2_3",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 7.576
+    },
+    {
+      "name": "cdc_1_8_2_7_4_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.106
+    },
+    {
+      "name": "cdc_1_8_2_7_4",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 6.543
+    },
+    {
+      "name": "counters_1_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.051
+    },
+    {
+      "name": "counters_1",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.213
+    },
+    {
+      "name": "counters_4_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.039
+    },
+    {
+      "name": "counters_4",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.197
+    },
+    {
+      "name": "counters_32_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.045
+    },
+    {
+      "name": "counters_32",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.206
+    },
+    {
+      "name": "counters_64_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.044
+    },
+    {
+      "name": "counters_64",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.204
+    },
+    {
+      "name": "synchronizers_2_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.05
+    },
+    {
+      "name": "synchronizers_2",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.026
+    },
+    {
+      "name": "synchronizers_3_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.04
+    },
+    {
+      "name": "synchronizers_3",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.026
+    },
+    {
+      "name": "synchronizers_4_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.042
+    },
+    {
+      "name": "synchronizers_4",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.03
+    },
+    {
+      "name": "async_fifo_1_2_3_5_1_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.054
+    },
+    {
+      "name": "async_fifo_1_2_3_5_1",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.641
+    },
+    {
+      "name": "async_fifo_128_4_2_7_3_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.045
+    },
+    {
+      "name": "async_fifo_128_4_2_7_3",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 2.55
+    },
+    {
+      "name": "async_fifo_1024_8_7_2_0_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.067
+    },
+    {
+      "name": "async_fifo_1024_8_7_2_0",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 9.97
+    },
+    {
+      "name": "async_fifo_17_16_3_3_0_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.046
+    },
+    {
+      "name": "async_fifo_17_16_3_3_0",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.533
+    },
+    {
+      "name": "extension_reject_0_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.048
+    },
+    {
+      "name": "extension_reject_0",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.023
+    },
+    {
+      "name": "extension_reject_1_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.047
+    },
+    {
+      "name": "extension_reject_1",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.024
+    },
+    {
+      "name": "extension_reject_2_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.05
+    },
+    {
+      "name": "extension_reject_2",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.021
+    },
+    {
+      "name": "extension_reject_3_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.046
+    },
+    {
+      "name": "extension_reject_3",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.022
+    },
+    {
+      "name": "extension_reject_4_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.05
+    },
+    {
+      "name": "extension_reject_4",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.023
+    },
+    {
+      "name": "extension_reject_5_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.046
+    },
+    {
+      "name": "extension_reject_5",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.025
+    },
+    {
+      "name": "extension_reject_6_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.048
+    },
+    {
+      "name": "extension_reject_6",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.023
+    },
+    {
+      "name": "extension_reject_7_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.047
+    },
+    {
+      "name": "extension_reject_7",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.023
+    },
+    {
+      "name": "extension_reject_8_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.048
+    },
+    {
+      "name": "extension_reject_8",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.023
+    },
+    {
+      "name": "extension_reject_9_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.061
+    },
+    {
+      "name": "extension_reject_9",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.034
+    },
+    {
+      "name": "extension_reject_10_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.07
+    },
+    {
+      "name": "extension_reject_10",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.036
+    },
+    {
+      "name": "extension_reject_11_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.071
+    },
+    {
+      "name": "extension_reject_11",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.039
+    },
+    {
+      "name": "extension_reject_12_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.083
+    },
+    {
+      "name": "extension_reject_12",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.036
+    },
+    {
+      "name": "extension_reject_13_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.068
+    },
+    {
+      "name": "extension_reject_13",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.034
+    },
+    {
+      "name": "extension_reject_14_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.07
+    },
+    {
+      "name": "extension_reject_14",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.036
+    },
+    {
+      "name": "extension_reject_15_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.093
+    },
+    {
+      "name": "extension_reject_15",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.044
+    },
+    {
+      "name": "extension_reject_16_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.091
+    },
+    {
+      "name": "extension_reject_16",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.043
+    },
+    {
+      "name": "extension_reject_17_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.06
+    },
+    {
+      "name": "extension_reject_17",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.035
+    },
+    {
+      "name": "extension_reject_18_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.089
+    },
+    {
+      "name": "extension_reject_18",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.043
+    },
+    {
+      "name": "extension_reject_19_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.048
+    },
+    {
+      "name": "extension_reject_19",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.021
+    },
+    {
+      "name": "extension_reject_20_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.044
+    },
+    {
+      "name": "extension_reject_20",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.023
+    },
+    {
+      "name": "extension_reject_21_compile",
+      "passed": true,
+      "expected_failure": false,
+      "seconds": 0.048
+    },
+    {
+      "name": "extension_reject_21",
+      "passed": true,
+      "expected_failure": true,
+      "seconds": 0.023
+    }
+  ]
+}

@@ -31,7 +31,7 @@ module mac_3stage_tb;
     .valid_out(valid_out)
   );
 
-  // Clock generation
+  // Clock stimulus
 
   initial clk = 0;
   always #5 clk = ~clk;   // 100MHz clock

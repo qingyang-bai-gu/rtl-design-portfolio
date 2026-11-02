@@ -1,0 +1,13 @@
+--indentation_spaces=4
+--wrap_spaces=4
+--column_limit=100
+--port_declarations_indentation=indent
+--assignment_statement_alignment=flush-left
+--case_items_alignment=flush-left
+--enum_assignment_statement_alignment=flush-left
+--formal_parameters_alignment=flush-left
+--module_net_variable_alignment=flush-left
+--named_parameter_alignment=flush-left
+--named_port_alignment=flush-left
+--port_declarations_alignment=flush-left
+--failsafe_success=false

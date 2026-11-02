@@ -1,0 +1,14 @@
+`verilator_config
+// Explicit named open outputs document intentionally unused status and harness ports.
+lint_off -rule PINCONNECTEMPTY
+// Timed drivers and edge-sampled scoreboards intentionally use blocking assignments.
+// They run on deliberately separated drive/sample phases; hardware RTL has no waiver.
+lint_off -rule BLKSEQ -file "tb/*.sv"
+// Declaration initializers intentionally establish verification state before time-zero drivers.
+// Keeping them avoids startup ordering races between separate initial blocks.
+lint_off -rule PROCASSINIT -file "tb/*.sv"
+// These reset nets deliberately feed async CDC state and synchronous baseline/checkers.
+// Assertion is common; deassertion is synchronized locally. See docs/CDC.md.
+lint_off -rule SYNCASYNCNET -file "tb/tb_multi.sv" -match "*rst_n*"
+lint_off -rule SYNCASYNCNET -file "tb/tb_async_fifo.sv" -match "*rst_n*"
+lint_off -rule SYNCASYNCNET -file "tb/tb_synchronizers.sv" -match "*rst_n*"

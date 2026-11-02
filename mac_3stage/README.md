@@ -6,7 +6,7 @@ This project implements a **parameterized 3-stage pipelined Multiply–Accumulat
 
 The design accepts two operands `a` and `b`, multiplies them, and accumulates the result into an output register. The pipeline allows the design to sustain **one result per clock cycle** after the pipeline is filled.
 
-This type of structure is widely used in **DSP blocks, neural-network accelerators, and GPU arithmetic units**.
+This structure is used in DSP datapaths and streaming arithmetic units.
 
 ---
 
@@ -26,7 +26,7 @@ The pipeline latency is **3 cycles**.
 a,b → [Reg] → [Multiply] → [Accumulator] → dout
 ```
 
-A `valid_in` / `valid_out` handshake is used to track valid data through the pipeline.
+`valid_in` and `valid_out` track valid samples through the pipeline.
 
 ---
 
@@ -83,10 +83,10 @@ mac_3stage/
 │   └── mac_3stage.sv
 │
 ├── tb/
-│   └── mac_3stage_tb.sv
+│   └── tb_mac_3stage.sv
 │
 ├── sim/
-│   └── run_vcs.sh
+│   └── run_sim.sh
 │
 └── README.md
 ```
@@ -105,7 +105,7 @@ The script will:
 
 1. Compile the RTL and testbench
 2. Run the simulation
-3. Generate a VCD waveform file
+3. Write a VCD waveform file
 
 ---
 

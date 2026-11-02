@@ -1,0 +1,1120 @@
+{
+  "passed": true,
+  "scope": "core service cycles; excludes scheduler, queue and CDC wait",
+  "model_sha256": "a5576665416e3db050d0fdac787a765293d3406f67570b8a0cb7abe2adbd03a5",
+  "configurations": [
+    {
+      "name": "multi_4_32_128_16",
+      "parameters": {
+        "CHANNELS": 4,
+        "ADDR_WIDTH": 32,
+        "DATA_WIDTH": 128,
+        "MAX_BURST_BEATS": 16
+      },
+      "measurements": [
+        {
+          "descriptors": 12,
+          "predicted_cycles": 396,
+          "measured_cycles": 396,
+          "difference": 0
+        },
+        {
+          "descriptors": 16,
+          "predicted_cycles": 712,
+          "measured_cycles": 712,
+          "difference": 0
+        },
+        {
+          "descriptors": 48,
+          "predicted_cycles": 1768,
+          "measured_cycles": 1768,
+          "difference": 0
+        },
+        {
+          "descriptors": 144,
+          "predicted_cycles": 25292,
+          "measured_cycles": 25292,
+          "difference": 0
+        },
+        {
+          "descriptors": 168,
+          "predicted_cycles": 27840,
+          "measured_cycles": 27840,
+          "difference": 0
+        },
+        {
+          "descriptors": 172,
+          "predicted_cycles": 28524,
+          "measured_cycles": 28524,
+          "difference": 0
+        },
+        {
+          "descriptors": 176,
+          "predicted_cycles": 28656,
+          "measured_cycles": 28656,
+          "difference": 0
+        },
+        {
+          "descriptors": 180,
+          "predicted_cycles": 29502,
+          "measured_cycles": 29502,
+          "difference": 0
+        },
+        {
+          "descriptors": 184,
+          "predicted_cycles": 29634,
+          "measured_cycles": 29634,
+          "difference": 0
+        },
+        {
+          "descriptors": 188,
+          "predicted_cycles": 30568,
+          "measured_cycles": 30568,
+          "difference": 0
+        },
+        {
+          "descriptors": 192,
+          "predicted_cycles": 30700,
+          "measured_cycles": 30700,
+          "difference": 0
+        },
+        {
+          "descriptors": 196,
+          "predicted_cycles": 31190,
+          "measured_cycles": 31190,
+          "difference": 0
+        },
+        {
+          "descriptors": 200,
+          "predicted_cycles": 31322,
+          "measured_cycles": 31322,
+          "difference": 0
+        },
+        {
+          "descriptors": 8,
+          "predicted_cycles": 264,
+          "measured_cycles": 264,
+          "difference": 0
+        },
+        {
+          "descriptors": 8,
+          "predicted_cycles": 264,
+          "measured_cycles": 264,
+          "difference": 0
+        },
+        {
+          "descriptors": 8,
+          "predicted_cycles": 264,
+          "measured_cycles": 264,
+          "difference": 0
+        }
+      ]
+    },
+    {
+      "name": "multi_3_32_128_3",
+      "parameters": {
+        "CHANNELS": 3,
+        "ADDR_WIDTH": 32,
+        "DATA_WIDTH": 128,
+        "MAX_BURST_BEATS": 3
+      },
+      "measurements": [
+        {
+          "descriptors": 9,
+          "predicted_cycles": 297,
+          "measured_cycles": 297,
+          "difference": 0
+        },
+        {
+          "descriptors": 12,
+          "predicted_cycles": 576,
+          "measured_cycles": 576,
+          "difference": 0
+        },
+        {
+          "descriptors": 36,
+          "predicted_cycles": 1368,
+          "measured_cycles": 1368,
+          "difference": 0
+        },
+        {
+          "descriptors": 108,
+          "predicted_cycles": 29386,
+          "measured_cycles": 29386,
+          "difference": 0
+        },
+        {
+          "descriptors": 126,
+          "predicted_cycles": 32038,
+          "measured_cycles": 32038,
+          "difference": 0
+        },
+        {
+          "descriptors": 129,
+          "predicted_cycles": 32493,
+          "measured_cycles": 32493,
+          "difference": 0
+        },
+        {
+          "descriptors": 132,
+          "predicted_cycles": 32592,
+          "measured_cycles": 32592,
+          "difference": 0
+        },
+        {
+          "descriptors": 135,
+          "predicted_cycles": 33159,
+          "measured_cycles": 33159,
+          "difference": 0
+        },
+        {
+          "descriptors": 138,
+          "predicted_cycles": 33258,
+          "measured_cycles": 33258,
+          "difference": 0
+        },
+        {
+          "descriptors": 141,
+          "predicted_cycles": 33873,
+          "measured_cycles": 33873,
+          "difference": 0
+        },
+        {
+          "descriptors": 144,
+          "predicted_cycles": 33972,
+          "measured_cycles": 33972,
+          "difference": 0
+        },
+        {
+          "descriptors": 147,
+          "predicted_cycles": 34597,
+          "measured_cycles": 34597,
+          "difference": 0
+        },
+        {
+          "descriptors": 150,
+          "predicted_cycles": 34696,
+          "measured_cycles": 34696,
+          "difference": 0
+        },
+        {
+          "descriptors": 6,
+          "predicted_cycles": 198,
+          "measured_cycles": 198,
+          "difference": 0
+        },
+        {
+          "descriptors": 6,
+          "predicted_cycles": 198,
+          "measured_cycles": 198,
+          "difference": 0
+        },
+        {
+          "descriptors": 6,
+          "predicted_cycles": 198,
+          "measured_cycles": 198,
+          "difference": 0
+        }
+      ]
+    },
+    {
+      "name": "multi_1_12_8_1",
+      "parameters": {
+        "CHANNELS": 1,
+        "ADDR_WIDTH": 12,
+        "DATA_WIDTH": 8,
+        "MAX_BURST_BEATS": 1
+      },
+      "measurements": [
+        {
+          "descriptors": 3,
+          "predicted_cycles": 183,
+          "measured_cycles": 183,
+          "difference": 0
+        },
+        {
+          "descriptors": 4,
+          "predicted_cycles": 1464,
+          "measured_cycles": 1464,
+          "difference": 0
+        },
+        {
+          "descriptors": 12,
+          "predicted_cycles": 1952,
+          "measured_cycles": 1952,
+          "difference": 0
+        },
+        {
+          "descriptors": 36,
+          "predicted_cycles": 17596,
+          "measured_cycles": 17596,
+          "difference": 0
+        },
+        {
+          "descriptors": 42,
+          "predicted_cycles": 20162,
+          "measured_cycles": 20162,
+          "difference": 0
+        },
+        {
+          "descriptors": 43,
+          "predicted_cycles": 20193,
+          "measured_cycles": 20193,
+          "difference": 0
+        },
+        {
+          "descriptors": 44,
+          "predicted_cycles": 20254,
+          "measured_cycles": 20254,
+          "difference": 0
+        },
+        {
+          "descriptors": 45,
+          "predicted_cycles": 20295,
+          "measured_cycles": 20295,
+          "difference": 0
+        },
+        {
+          "descriptors": 46,
+          "predicted_cycles": 20356,
+          "measured_cycles": 20356,
+          "difference": 0
+        },
+        {
+          "descriptors": 47,
+          "predicted_cycles": 20387,
+          "measured_cycles": 20387,
+          "difference": 0
+        },
+        {
+          "descriptors": 48,
+          "predicted_cycles": 20448,
+          "measured_cycles": 20448,
+          "difference": 0
+        },
+        {
+          "descriptors": 49,
+          "predicted_cycles": 20489,
+          "measured_cycles": 20489,
+          "difference": 0
+        },
+        {
+          "descriptors": 50,
+          "predicted_cycles": 20550,
+          "measured_cycles": 20550,
+          "difference": 0
+        },
+        {
+          "descriptors": 2,
+          "predicted_cycles": 122,
+          "measured_cycles": 122,
+          "difference": 0
+        },
+        {
+          "descriptors": 2,
+          "predicted_cycles": 122,
+          "measured_cycles": 122,
+          "difference": 0
+        },
+        {
+          "descriptors": 2,
+          "predicted_cycles": 122,
+          "measured_cycles": 122,
+          "difference": 0
+        }
+      ]
+    },
+    {
+      "name": "multi_5_64_1024_256",
+      "parameters": {
+        "CHANNELS": 5,
+        "ADDR_WIDTH": 64,
+        "DATA_WIDTH": 1024,
+        "MAX_BURST_BEATS": 256
+      },
+      "measurements": [
+        {
+          "descriptors": 15,
+          "predicted_cycles": 495,
+          "measured_cycles": 495,
+          "difference": 0
+        },
+        {
+          "descriptors": 20,
+          "predicted_cycles": 890,
+          "measured_cycles": 890,
+          "difference": 0
+        },
+        {
+          "descriptors": 60,
+          "predicted_cycles": 2210,
+          "measured_cycles": 2210,
+          "difference": 0
+        },
+        {
+          "descriptors": 180,
+          "predicted_cycles": 16006,
+          "measured_cycles": 16006,
+          "difference": 0
+        },
+        {
+          "descriptors": 210,
+          "predicted_cycles": 17660,
+          "measured_cycles": 17660,
+          "difference": 0
+        },
+        {
+          "descriptors": 215,
+          "predicted_cycles": 18501,
+          "measured_cycles": 18501,
+          "difference": 0
+        },
+        {
+          "descriptors": 220,
+          "predicted_cycles": 18666,
+          "measured_cycles": 18666,
+          "difference": 0
+        },
+        {
+          "descriptors": 225,
+          "predicted_cycles": 19505,
+          "measured_cycles": 19505,
+          "difference": 0
+        },
+        {
+          "descriptors": 230,
+          "predicted_cycles": 19670,
+          "measured_cycles": 19670,
+          "difference": 0
+        },
+        {
+          "descriptors": 235,
+          "predicted_cycles": 20255,
+          "measured_cycles": 20255,
+          "difference": 0
+        },
+        {
+          "descriptors": 240,
+          "predicted_cycles": 20420,
+          "measured_cycles": 20420,
+          "difference": 0
+        },
+        {
+          "descriptors": 245,
+          "predicted_cycles": 21031,
+          "measured_cycles": 21031,
+          "difference": 0
+        },
+        {
+          "descriptors": 250,
+          "predicted_cycles": 21196,
+          "measured_cycles": 21196,
+          "difference": 0
+        },
+        {
+          "descriptors": 10,
+          "predicted_cycles": 330,
+          "measured_cycles": 330,
+          "difference": 0
+        },
+        {
+          "descriptors": 10,
+          "predicted_cycles": 330,
+          "measured_cycles": 330,
+          "difference": 0
+        },
+        {
+          "descriptors": 10,
+          "predicted_cycles": 330,
+          "measured_cycles": 330,
+          "difference": 0
+        }
+      ]
+    },
+    {
+      "name": "multi_queue_depths",
+      "parameters": {
+        "CHANNELS": 3,
+        "DESCRIPTOR_DEPTH": 3,
+        "COMPLETION_DEPTH": 3
+      },
+      "measurements": [
+        {
+          "descriptors": 9,
+          "predicted_cycles": 297,
+          "measured_cycles": 297,
+          "difference": 0
+        },
+        {
+          "descriptors": 12,
+          "predicted_cycles": 534,
+          "measured_cycles": 534,
+          "difference": 0
+        },
+        {
+          "descriptors": 36,
+          "predicted_cycles": 1326,
+          "measured_cycles": 1326,
+          "difference": 0
+        },
+        {
+          "descriptors": 108,
+          "predicted_cycles": 19670,
+          "measured_cycles": 19670,
+          "difference": 0
+        },
+        {
+          "descriptors": 126,
+          "predicted_cycles": 21426,
+          "measured_cycles": 21426,
+          "difference": 0
+        },
+        {
+          "descriptors": 129,
+          "predicted_cycles": 21833,
+          "measured_cycles": 21833,
+          "difference": 0
+        },
+        {
+          "descriptors": 132,
+          "predicted_cycles": 21932,
+          "measured_cycles": 21932,
+          "difference": 0
+        },
+        {
+          "descriptors": 135,
+          "predicted_cycles": 22409,
+          "measured_cycles": 22409,
+          "difference": 0
+        },
+        {
+          "descriptors": 138,
+          "predicted_cycles": 22508,
+          "measured_cycles": 22508,
+          "difference": 0
+        },
+        {
+          "descriptors": 141,
+          "predicted_cycles": 23005,
+          "measured_cycles": 23005,
+          "difference": 0
+        },
+        {
+          "descriptors": 144,
+          "predicted_cycles": 23104,
+          "measured_cycles": 23104,
+          "difference": 0
+        },
+        {
+          "descriptors": 147,
+          "predicted_cycles": 23611,
+          "measured_cycles": 23611,
+          "difference": 0
+        },
+        {
+          "descriptors": 150,
+          "predicted_cycles": 23710,
+          "measured_cycles": 23710,
+          "difference": 0
+        },
+        {
+          "descriptors": 6,
+          "predicted_cycles": 198,
+          "measured_cycles": 198,
+          "difference": 0
+        },
+        {
+          "descriptors": 6,
+          "predicted_cycles": 198,
+          "measured_cycles": 198,
+          "difference": 0
+        },
+        {
+          "descriptors": 6,
+          "predicted_cycles": 198,
+          "measured_cycles": 198,
+          "difference": 0
+        }
+      ]
+    },
+    {
+      "name": "multi_zero_delay",
+      "parameters": {
+        "AR_DELAY": 0,
+        "R_DELAY": 0,
+        "AW_DELAY": 0,
+        "W_DELAY": 0,
+        "B_DELAY": 0
+      },
+      "measurements": [
+        {
+          "descriptors": 12,
+          "predicted_cycles": 228,
+          "measured_cycles": 228,
+          "difference": 0
+        },
+        {
+          "descriptors": 16,
+          "predicted_cycles": 412,
+          "measured_cycles": 412,
+          "difference": 0
+        },
+        {
+          "descriptors": 48,
+          "predicted_cycles": 1020,
+          "measured_cycles": 1020,
+          "difference": 0
+        },
+        {
+          "descriptors": 144,
+          "predicted_cycles": 13338,
+          "measured_cycles": 13338,
+          "difference": 0
+        },
+        {
+          "descriptors": 168,
+          "predicted_cycles": 14682,
+          "measured_cycles": 14682,
+          "difference": 0
+        },
+        {
+          "descriptors": 172,
+          "predicted_cycles": 15045,
+          "measured_cycles": 15045,
+          "difference": 0
+        },
+        {
+          "descriptors": 176,
+          "predicted_cycles": 15121,
+          "measured_cycles": 15121,
+          "difference": 0
+        },
+        {
+          "descriptors": 180,
+          "predicted_cycles": 15566,
+          "measured_cycles": 15566,
+          "difference": 0
+        },
+        {
+          "descriptors": 184,
+          "predicted_cycles": 15642,
+          "measured_cycles": 15642,
+          "difference": 0
+        },
+        {
+          "descriptors": 188,
+          "predicted_cycles": 16134,
+          "measured_cycles": 16134,
+          "difference": 0
+        },
+        {
+          "descriptors": 192,
+          "predicted_cycles": 16210,
+          "measured_cycles": 16210,
+          "difference": 0
+        },
+        {
+          "descriptors": 196,
+          "predicted_cycles": 16469,
+          "measured_cycles": 16469,
+          "difference": 0
+        },
+        {
+          "descriptors": 200,
+          "predicted_cycles": 16545,
+          "measured_cycles": 16545,
+          "difference": 0
+        },
+        {
+          "descriptors": 8,
+          "predicted_cycles": 152,
+          "measured_cycles": 152,
+          "difference": 0
+        },
+        {
+          "descriptors": 8,
+          "predicted_cycles": 152,
+          "measured_cycles": 152,
+          "difference": 0
+        },
+        {
+          "descriptors": 8,
+          "predicted_cycles": 152,
+          "measured_cycles": 152,
+          "difference": 0
+        }
+      ]
+    },
+    {
+      "name": "multi_delays",
+      "parameters": {
+        "AR_DELAY": 1,
+        "R_DELAY": 3,
+        "AW_DELAY": 4,
+        "W_DELAY": 1,
+        "B_DELAY": 2
+      },
+      "measurements": [
+        {
+          "descriptors": 12,
+          "predicted_cycles": 456,
+          "measured_cycles": 456,
+          "difference": 0
+        },
+        {
+          "descriptors": 16,
+          "predicted_cycles": 820,
+          "measured_cycles": 820,
+          "difference": 0
+        },
+        {
+          "descriptors": 48,
+          "predicted_cycles": 2036,
+          "measured_cycles": 2036,
+          "difference": 0
+        },
+        {
+          "descriptors": 144,
+          "predicted_cycles": 29380,
+          "measured_cycles": 29380,
+          "difference": 0
+        },
+        {
+          "descriptors": 168,
+          "predicted_cycles": 32339,
+          "measured_cycles": 32339,
+          "difference": 0
+        },
+        {
+          "descriptors": 172,
+          "predicted_cycles": 33136,
+          "measured_cycles": 33136,
+          "difference": 0
+        },
+        {
+          "descriptors": 176,
+          "predicted_cycles": 33288,
+          "measured_cycles": 33288,
+          "difference": 0
+        },
+        {
+          "descriptors": 180,
+          "predicted_cycles": 34271,
+          "measured_cycles": 34271,
+          "difference": 0
+        },
+        {
+          "descriptors": 184,
+          "predicted_cycles": 34423,
+          "measured_cycles": 34423,
+          "difference": 0
+        },
+        {
+          "descriptors": 188,
+          "predicted_cycles": 35511,
+          "measured_cycles": 35511,
+          "difference": 0
+        },
+        {
+          "descriptors": 192,
+          "predicted_cycles": 35663,
+          "measured_cycles": 35663,
+          "difference": 0
+        },
+        {
+          "descriptors": 196,
+          "predicted_cycles": 36232,
+          "measured_cycles": 36232,
+          "difference": 0
+        },
+        {
+          "descriptors": 200,
+          "predicted_cycles": 36384,
+          "measured_cycles": 36384,
+          "difference": 0
+        },
+        {
+          "descriptors": 8,
+          "predicted_cycles": 304,
+          "measured_cycles": 304,
+          "difference": 0
+        },
+        {
+          "descriptors": 8,
+          "predicted_cycles": 304,
+          "measured_cycles": 304,
+          "difference": 0
+        },
+        {
+          "descriptors": 8,
+          "predicted_cycles": 304,
+          "measured_cycles": 304,
+          "difference": 0
+        }
+      ]
+    },
+    {
+      "name": "cdc_4_4_3_5_1",
+      "parameters": {
+        "CHANNELS": 4,
+        "CDC_DEPTH": 4,
+        "CTRL_HALF": 3,
+        "AXI_HALF": 5,
+        "AXI_PHASE": 1,
+        "CDC_ENABLE": 1
+      },
+      "measurements": [
+        {
+          "descriptors": 12,
+          "predicted_cycles": 396,
+          "measured_cycles": 396,
+          "difference": 0
+        },
+        {
+          "descriptors": 16,
+          "predicted_cycles": 712,
+          "measured_cycles": 712,
+          "difference": 0
+        },
+        {
+          "descriptors": 48,
+          "predicted_cycles": 1768,
+          "measured_cycles": 1768,
+          "difference": 0
+        },
+        {
+          "descriptors": 144,
+          "predicted_cycles": 25292,
+          "measured_cycles": 25292,
+          "difference": 0
+        },
+        {
+          "descriptors": 168,
+          "predicted_cycles": 27840,
+          "measured_cycles": 27840,
+          "difference": 0
+        },
+        {
+          "descriptors": 172,
+          "predicted_cycles": 28524,
+          "measured_cycles": 28524,
+          "difference": 0
+        },
+        {
+          "descriptors": 176,
+          "predicted_cycles": 28656,
+          "measured_cycles": 28656,
+          "difference": 0
+        },
+        {
+          "descriptors": 180,
+          "predicted_cycles": 29502,
+          "measured_cycles": 29502,
+          "difference": 0
+        },
+        {
+          "descriptors": 184,
+          "predicted_cycles": 29634,
+          "measured_cycles": 29634,
+          "difference": 0
+        },
+        {
+          "descriptors": 188,
+          "predicted_cycles": 30568,
+          "measured_cycles": 30568,
+          "difference": 0
+        },
+        {
+          "descriptors": 192,
+          "predicted_cycles": 30700,
+          "measured_cycles": 30700,
+          "difference": 0
+        },
+        {
+          "descriptors": 196,
+          "predicted_cycles": 31190,
+          "measured_cycles": 31190,
+          "difference": 0
+        },
+        {
+          "descriptors": 200,
+          "predicted_cycles": 31322,
+          "measured_cycles": 31322,
+          "difference": 0
+        },
+        {
+          "descriptors": 8,
+          "predicted_cycles": 264,
+          "measured_cycles": 264,
+          "difference": 0
+        },
+        {
+          "descriptors": 8,
+          "predicted_cycles": 264,
+          "measured_cycles": 264,
+          "difference": 0
+        },
+        {
+          "descriptors": 8,
+          "predicted_cycles": 264,
+          "measured_cycles": 264,
+          "difference": 0
+        },
+        {
+          "descriptors": 8,
+          "predicted_cycles": 264,
+          "measured_cycles": 264,
+          "difference": 0
+        },
+        {
+          "descriptors": 8,
+          "predicted_cycles": 264,
+          "measured_cycles": 264,
+          "difference": 0
+        }
+      ]
+    },
+    {
+      "name": "cdc_3_2_7_2_3",
+      "parameters": {
+        "CHANNELS": 3,
+        "CDC_DEPTH": 2,
+        "CTRL_HALF": 7,
+        "AXI_HALF": 2,
+        "AXI_PHASE": 3,
+        "CDC_ENABLE": 1
+      },
+      "measurements": [
+        {
+          "descriptors": 9,
+          "predicted_cycles": 297,
+          "measured_cycles": 297,
+          "difference": 0
+        },
+        {
+          "descriptors": 12,
+          "predicted_cycles": 534,
+          "measured_cycles": 534,
+          "difference": 0
+        },
+        {
+          "descriptors": 36,
+          "predicted_cycles": 1326,
+          "measured_cycles": 1326,
+          "difference": 0
+        },
+        {
+          "descriptors": 108,
+          "predicted_cycles": 19670,
+          "measured_cycles": 19670,
+          "difference": 0
+        },
+        {
+          "descriptors": 126,
+          "predicted_cycles": 21426,
+          "measured_cycles": 21426,
+          "difference": 0
+        },
+        {
+          "descriptors": 129,
+          "predicted_cycles": 21833,
+          "measured_cycles": 21833,
+          "difference": 0
+        },
+        {
+          "descriptors": 132,
+          "predicted_cycles": 21932,
+          "measured_cycles": 21932,
+          "difference": 0
+        },
+        {
+          "descriptors": 135,
+          "predicted_cycles": 22409,
+          "measured_cycles": 22409,
+          "difference": 0
+        },
+        {
+          "descriptors": 138,
+          "predicted_cycles": 22508,
+          "measured_cycles": 22508,
+          "difference": 0
+        },
+        {
+          "descriptors": 141,
+          "predicted_cycles": 23005,
+          "measured_cycles": 23005,
+          "difference": 0
+        },
+        {
+          "descriptors": 144,
+          "predicted_cycles": 23104,
+          "measured_cycles": 23104,
+          "difference": 0
+        },
+        {
+          "descriptors": 147,
+          "predicted_cycles": 23611,
+          "measured_cycles": 23611,
+          "difference": 0
+        },
+        {
+          "descriptors": 150,
+          "predicted_cycles": 23710,
+          "measured_cycles": 23710,
+          "difference": 0
+        },
+        {
+          "descriptors": 6,
+          "predicted_cycles": 198,
+          "measured_cycles": 198,
+          "difference": 0
+        },
+        {
+          "descriptors": 6,
+          "predicted_cycles": 198,
+          "measured_cycles": 198,
+          "difference": 0
+        },
+        {
+          "descriptors": 6,
+          "predicted_cycles": 198,
+          "measured_cycles": 198,
+          "difference": 0
+        },
+        {
+          "descriptors": 6,
+          "predicted_cycles": 198,
+          "measured_cycles": 198,
+          "difference": 0
+        },
+        {
+          "descriptors": 6,
+          "predicted_cycles": 198,
+          "measured_cycles": 198,
+          "difference": 0
+        }
+      ]
+    },
+    {
+      "name": "cdc_1_8_2_7_4",
+      "parameters": {
+        "CHANNELS": 1,
+        "CDC_DEPTH": 8,
+        "CTRL_HALF": 2,
+        "AXI_HALF": 7,
+        "AXI_PHASE": 4,
+        "CDC_ENABLE": 1
+      },
+      "measurements": [
+        {
+          "descriptors": 3,
+          "predicted_cycles": 99,
+          "measured_cycles": 99,
+          "difference": 0
+        },
+        {
+          "descriptors": 4,
+          "predicted_cycles": 178,
+          "measured_cycles": 178,
+          "difference": 0
+        },
+        {
+          "descriptors": 12,
+          "predicted_cycles": 442,
+          "measured_cycles": 442,
+          "difference": 0
+        },
+        {
+          "descriptors": 36,
+          "predicted_cycles": 6020,
+          "measured_cycles": 6020,
+          "difference": 0
+        },
+        {
+          "descriptors": 42,
+          "predicted_cycles": 6920,
+          "measured_cycles": 6920,
+          "difference": 0
+        },
+        {
+          "descriptors": 43,
+          "predicted_cycles": 7047,
+          "measured_cycles": 7047,
+          "difference": 0
+        },
+        {
+          "descriptors": 44,
+          "predicted_cycles": 7080,
+          "measured_cycles": 7080,
+          "difference": 0
+        },
+        {
+          "descriptors": 45,
+          "predicted_cycles": 7223,
+          "measured_cycles": 7223,
+          "difference": 0
+        },
+        {
+          "descriptors": 46,
+          "predicted_cycles": 7256,
+          "measured_cycles": 7256,
+          "difference": 0
+        },
+        {
+          "descriptors": 47,
+          "predicted_cycles": 7383,
+          "measured_cycles": 7383,
+          "difference": 0
+        },
+        {
+          "descriptors": 48,
+          "predicted_cycles": 7416,
+          "measured_cycles": 7416,
+          "difference": 0
+        },
+        {
+          "descriptors": 49,
+          "predicted_cycles": 7559,
+          "measured_cycles": 7559,
+          "difference": 0
+        },
+        {
+          "descriptors": 50,
+          "predicted_cycles": 7592,
+          "measured_cycles": 7592,
+          "difference": 0
+        },
+        {
+          "descriptors": 2,
+          "predicted_cycles": 66,
+          "measured_cycles": 66,
+          "difference": 0
+        },
+        {
+          "descriptors": 2,
+          "predicted_cycles": 66,
+          "measured_cycles": 66,
+          "difference": 0
+        },
+        {
+          "descriptors": 2,
+          "predicted_cycles": 66,
+          "measured_cycles": 66,
+          "difference": 0
+        },
+        {
+          "descriptors": 2,
+          "predicted_cycles": 66,
+          "measured_cycles": 66,
+          "difference": 0
+        },
+        {
+          "descriptors": 2,
+          "predicted_cycles": 66,
+          "measured_cycles": 66,
+          "difference": 0
+        }
+      ]
+    }
+  ]
+}
