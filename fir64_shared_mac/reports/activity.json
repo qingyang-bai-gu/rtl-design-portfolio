@@ -1,0 +1,192 @@
+{
+  "kind": "RTL switching activity; not watts or a gate-level power estimate",
+  "vcd_timescale": "1ps",
+  "duration_ticks": 1520672000,
+  "unique_signal_ids": 69,
+  "known_bit_transitions": 10325049,
+  "top_signals": [
+    {
+      "width": 38,
+      "names": [
+        "tb_fir64.dut.addend"
+      ],
+      "bit_transitions": 1668245
+    },
+    {
+      "width": 32,
+      "names": [
+        "tb_fir64.dut.product"
+      ],
+      "bit_transitions": 1391705
+    },
+    {
+      "width": 38,
+      "names": [
+        "tb_fir64.dut.sum_next"
+      ],
+      "bit_transitions": 1219684
+    },
+    {
+      "width": 38,
+      "names": [
+        "tb_fir64.dut.accumulator"
+      ],
+      "bit_transitions": 1206489
+    },
+    {
+      "width": 16,
+      "names": [
+        "tb_fir64.dut.coeff_q"
+      ],
+      "bit_transitions": 732876
+    },
+    {
+      "width": 16,
+      "names": [
+        "tb_fir64.dut.u_coefficients.rd_data"
+      ],
+      "bit_transitions": 732876
+    },
+    {
+      "width": 16,
+      "names": [
+        "tb_fir64.dut.sample_q"
+      ],
+      "bit_transitions": 705503
+    },
+    {
+      "width": 16,
+      "names": [
+        "tb_fir64.dut.u_history.rd_data"
+      ],
+      "bit_transitions": 705503
+    },
+    {
+      "width": 1,
+      "names": [
+        "tb_fir64.dut.proc_clk",
+        "tb_fir64.dut.u_coefficients.clk",
+        "tb_fir64.dut.u_history.clk",
+        "tb_fir64.dut.u_input_fifo.rd_clk",
+        "tb_fir64.dut.u_input_fifo.u_rd_reset.clk",
+        "tb_fir64.dut.u_proc_reset.clk"
+      ],
+      "bit_transitions": 304134
+    },
+    {
+      "width": 6,
+      "names": [
+        "tb_fir64.dut.sample_addr"
+      ],
+      "bit_transitions": 249444
+    },
+    {
+      "width": 6,
+      "names": [
+        "tb_fir64.dut.u_history.rd_addr"
+      ],
+      "bit_transitions": 249444
+    },
+    {
+      "width": 6,
+      "names": [
+        "tb_fir64.dut.mem_tap"
+      ],
+      "bit_transitions": 245595
+    },
+    {
+      "width": 6,
+      "names": [
+        "tb_fir64.dut.u_coefficients.rd_addr"
+      ],
+      "bit_transitions": 245595
+    },
+    {
+      "width": 6,
+      "names": [
+        "tb_fir64.dut.tap_index"
+      ],
+      "bit_transitions": 245584
+    },
+    {
+      "width": 1,
+      "names": [
+        "tb_fir64.dut.sample_clk",
+        "tb_fir64.dut.u_input_fifo.wr_clk",
+        "tb_fir64.dut.u_input_fifo.u_wr_reset.clk"
+      ],
+      "bit_transitions": 217238
+    },
+    {
+      "width": 1,
+      "names": [
+        "tb_fir64.dut.m_ready"
+      ],
+      "bit_transitions": 25935
+    },
+    {
+      "width": 38,
+      "names": [
+        "tb_fir64.dut.m_acc"
+      ],
+      "bit_transitions": 23819
+    },
+    {
+      "width": 16,
+      "names": [
+        "tb_fir64.dut.m_data"
+      ],
+      "bit_transitions": 11132
+    },
+    {
+      "width": 16,
+      "names": [
+        "tb_fir64.dut.s_data"
+      ],
+      "bit_transitions": 11008
+    },
+    {
+      "width": 16,
+      "names": [
+        "tb_fir64.dut.fifo_data"
+      ],
+      "bit_transitions": 11008
+    },
+    {
+      "width": 16,
+      "names": [
+        "tb_fir64.dut.u_history.wr_data"
+      ],
+      "bit_transitions": 11008
+    },
+    {
+      "width": 16,
+      "names": [
+        "tb_fir64.dut.u_input_fifo.rd_data"
+      ],
+      "bit_transitions": 11008
+    },
+    {
+      "width": 16,
+      "names": [
+        "tb_fir64.dut.u_input_fifo.wr_data"
+      ],
+      "bit_transitions": 11008
+    },
+    {
+      "width": 2,
+      "names": [
+        "tb_fir64.dut.state"
+      ],
+      "bit_transitions": 7800
+    },
+    {
+      "width": 4,
+      "names": [
+        "tb_fir64.dut.u_input_fifo.rd_bin_next"
+      ],
+      "bit_transitions": 4302
+    }
+  ],
+  "caveats": "Aliases counted once. X/Z transitions ignored. Entire test includes resets and stalls."
+}

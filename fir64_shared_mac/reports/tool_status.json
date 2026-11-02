@@ -1,0 +1,17 @@
+{
+  "evaluation_date": "2026-11-01",
+  "timezone": "America/Los_Angeles",
+  "functional_simulation": "PASS: 17 configurations, 9740 outputs and exact accumulators",
+  "reference_unit_tests": "PASS: 4 tests",
+  "activity_parser_unit_tests": "PASS: case-sensitive IDs, alias handling, X/Z transitions",
+  "gate_testbench_port_only_mode": "PASS against RTL; mapped netlist not available",
+  "python": "3.10",
+  "iverilog": "13.0 stable",
+  "matlab": "R2022a installed; startup failed: expired license, License Manager Error -10",
+  "matlab_vectors_compared": false,
+  "yosys": "not installed; synthesis flow not executed",
+  "opensta": "not installed; timing and power flows not executed",
+  "technology_library": "not supplied",
+  "area_timing_power_measurements": null,
+  "historical_2023_results": "not supplied; no original measurements reconstructed"
+}

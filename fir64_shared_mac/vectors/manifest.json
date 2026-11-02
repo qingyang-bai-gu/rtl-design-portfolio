@@ -1,0 +1,45 @@
+{
+  "seed": "0x13579bdf",
+  "samples": 1820,
+  "profiles": {
+    "lowpass": {
+      "coefficient_sum": 32768,
+      "min_acc": -1165787136,
+      "max_acc": 1165751559,
+      "positive_clips": 30,
+      "negative_clips": 30,
+      "positive_ties": 3,
+      "negative_ties": 65
+    },
+    "stress": {
+      "coefficient_sum": -2097152,
+      "min_acc": -68717379584,
+      "max_acc": 68719476736,
+      "positive_clips": 704,
+      "negative_clips": 601,
+      "positive_ties": 0,
+      "negative_ties": 0
+    },
+    "half": {
+      "coefficient_sum": 16384,
+      "min_acc": -536870912,
+      "max_acc": 536854528,
+      "positive_clips": 0,
+      "negative_clips": 0,
+      "positive_ties": 443,
+      "negative_ties": 280
+    }
+  },
+  "sha256": {
+    "coefficients/half_q15.hex": "78da0fdb323c316bbd7eba6d5ea3bb5dd8499cd5e8f34b6f2c433d267a156a9f",
+    "coefficients/lowpass_q15.hex": "5d5c18701d02a84861e17169bd9a8520a512ad0f1062d2d86720d4bacecf5e7a",
+    "coefficients/stress_q15.hex": "b738daf8c2a667fa218342afcc93d04471336dd889af87a5c07267b7b5c99585",
+    "vectors/half_acc.hex": "0391b5550c703295f4cc73ec6fa5b441e14cc1d686583e49eed09fed8282cc82",
+    "vectors/half_output.hex": "84fb384c20d0e06629d822087f451f3659f1f3a9645504ed369d839e8224fc4b",
+    "vectors/input.hex": "c3f893e1d4422c9fa3ce26995d1dca827416b600c1c4ce128015e7bb5ba0fe4a",
+    "vectors/lowpass_acc.hex": "4d4e97387ab43eaebceff32f7b76a809e23368f210f6e624bc6095141a9f6ba3",
+    "vectors/lowpass_output.hex": "c3d40fa8b291ae0d1ec17c82016f814ca352cfa01ab532cdea7fcd8d4f3e61bf",
+    "vectors/stress_acc.hex": "342ec8a5bb6b2a312a431b2130bc69d35efd364be22de0635c5fe12c8eda403f",
+    "vectors/stress_output.hex": "2d428e9edd3188a4ad82f4a1558cdafc8764f47e2e904d37de2b4defefc992ce"
+  }
+}

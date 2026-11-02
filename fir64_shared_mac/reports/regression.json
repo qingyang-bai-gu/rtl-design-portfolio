@@ -1,0 +1,80 @@
+{
+  "simulator": "Icarus Verilog version 13.0 (stable) (v13_0)",
+  "tests": [
+    {
+      "test": "fifo_depth2_3_5",
+      "status": "PASS"
+    },
+    {
+      "test": "fifo_depth2_7_5",
+      "status": "PASS"
+    },
+    {
+      "test": "fifo_depth2_5_13",
+      "status": "PASS"
+    },
+    {
+      "test": "fifo_depth4_3_5",
+      "status": "PASS"
+    },
+    {
+      "test": "fifo_depth4_7_5",
+      "status": "PASS"
+    },
+    {
+      "test": "fifo_depth4_5_13",
+      "status": "PASS"
+    },
+    {
+      "test": "fifo_depth8_3_5",
+      "status": "PASS"
+    },
+    {
+      "test": "fifo_depth8_7_5",
+      "status": "PASS"
+    },
+    {
+      "test": "fifo_depth8_5_13",
+      "status": "PASS"
+    },
+    {
+      "test": "fifo_depth16_3_5",
+      "status": "PASS"
+    },
+    {
+      "test": "fifo_depth16_7_5",
+      "status": "PASS"
+    },
+    {
+      "test": "fifo_depth16_5_13",
+      "status": "PASS"
+    },
+    {
+      "test": "fir_lowpass_depth8_7_5",
+      "status": "PASS",
+      "samples": 1948
+    },
+    {
+      "test": "fir_lowpass_depth2_337_5",
+      "status": "PASS",
+      "samples": 1948
+    },
+    {
+      "test": "fir_lowpass_depth16_5_7",
+      "status": "PASS",
+      "samples": 1948
+    },
+    {
+      "test": "fir_stress_depth8_7_5",
+      "status": "PASS",
+      "samples": 1948
+    },
+    {
+      "test": "fir_half_depth4_7_5",
+      "status": "PASS",
+      "samples": 1948
+    }
+  ],
+  "test_configurations": 17,
+  "fir_outputs_compared": 9740
+}
