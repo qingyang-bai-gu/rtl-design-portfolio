@@ -19,6 +19,7 @@ module fifo_sync #(
   reg [ADDR_WIDTH:0] rd_ptr;
   wire [ADDR_WIDTH:0] wr_ptr_next;
   wire [ADDR_WIDTH:0] rd_ptr_next; 
+  // MSB of each ptr is a wrap bit for distinguishing empty and full
   
   assign wr_ptr_next = (wr_ptr[ADDR_WIDTH-1:0] == DEPTH - 1) ? {~wr_ptr[ADDR_WIDTH], {ADDR_WIDTH{1'b0}}} : (wr_ptr + 1);
   assign rd_ptr_next = (rd_ptr[ADDR_WIDTH-1:0] == DEPTH - 1) ? {~rd_ptr[ADDR_WIDTH], {ADDR_WIDTH{1'b0}}} : (rd_ptr + 1);
