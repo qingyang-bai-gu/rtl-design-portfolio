@@ -8,6 +8,7 @@ module tb_fifo_async #(
 
   reg wr_clk = 0;
   reg rd_clk = 0;
+  reg wr_clk_run = 1;
   reg rd_clk_run = 1;
   reg rst = 0;
   reg wr = 0;
@@ -21,7 +22,7 @@ module tb_fifo_async #(
     .din(din), .dout(dout), .empty(empty), .full(full)
   );
 
-  always #(WR_HALF_PERIOD) wr_clk = ~wr_clk;
+  always #(WR_HALF_PERIOD) if (wr_clk_run) wr_clk = ~wr_clk;
   always #(RD_HALF_PERIOD) if (rd_clk_run) rd_clk = ~rd_clk;
 
   reg [WIDTH-1:0] expected_mem [0:DEPTH-1];
@@ -108,13 +109,50 @@ module tb_fifo_async #(
       if (full !== 1'b0) $fatal(1, "Full did not clear after reads");
     end
 
-    // Flush unread words while the read clock is stopped.
-    write_cycles(DEPTH);
-    wait (empty === 1'b0);
-    @(negedge rd_clk);
-    rd_clk_run = 0;
-    pulse_rst();
-    rd_clk_run = 1;
+    // Assert reset with unread data and both requests high while the clocks are stopped.
+    begin : check_pending_rst
+      integer wr_addr;
+      reg [WIDTH-1:0] mem_before_rst;
+
+      @(negedge wr_clk);
+      wr = 1;
+      din = '0;
+      @(negedge wr_clk);
+      din = '1;
+      @(negedge wr_clk);
+      wr = 0;
+
+      repeat (3) @(negedge rd_clk);
+      read_cycles(1);
+      repeat (4) @(negedge wr_clk);
+      if (dout !== '0 || empty !== 1'b0 || full !== 1'b0)
+        $fatal(1, "Reset test needs one unread word and space for a write");
+
+      wr_addr = writes % DEPTH;
+      mem_before_rst = dut.mem[wr_addr];
+      fork
+        begin
+          @(negedge wr_clk);
+          wr_clk_run = 0;
+          wr = 1;
+          din = ~mem_before_rst;
+        end
+        begin
+          @(negedge rd_clk);
+          rd_clk_run = 0;
+          rd = 1;
+        end
+      join
+
+      pulse_rst();
+      if (dout !== '0 || dut.mem[wr_addr] !== mem_before_rst)
+        $fatal(1, "FIFO data changed on reset without a clock edge");
+
+      wr = 0;
+      rd = 0;
+      wr_clk_run = 1;
+      rd_clk_run = 1;
+    end
     wait_for_rst_release();
     read_cycles(3);
     if (reads != 0 || empty !== 1'b1) $fatal(1, "Reset did not flush the FIFO");

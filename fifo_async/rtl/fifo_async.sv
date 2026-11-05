@@ -64,10 +64,6 @@ module fifo_async #(
       wr_ptr_gray <= wr_ptr_gray_next;
       full <= (wr_ptr_gray_next == (rd_ptr_gray_sync ^ FULL_MASK));
     end
-
-    if (wr_take) begin
-      mem[wr_ptr_bin[ADDR_WIDTH-1:0]] <= din;
-    end
   end
 
   // Read clock domain:
@@ -85,7 +81,16 @@ module fifo_async #(
       rd_ptr_gray <= rd_ptr_gray_next;
       empty <= (rd_ptr_gray_next == wr_ptr_gray_sync);
     end
+  end
 
+  // Keep storage and dout updates clocked only.
+  always @(posedge wr_clk) begin
+    if (wr_take) begin
+      mem[wr_ptr_bin[ADDR_WIDTH-1:0]] <= din;
+    end
+  end
+
+  always @(posedge rd_clk) begin
     if (rd_take) begin
       dout <= mem[rd_ptr_bin[ADDR_WIDTH-1:0]];
     end
