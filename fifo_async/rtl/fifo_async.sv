@@ -18,8 +18,8 @@ module fifo_async #(
 
   localparam ADDR_WIDTH = (DEPTH < 2) ? 1 : $clog2(DEPTH);
   localparam PTR_WIDTH = ADDR_WIDTH + 1;
-  // Adding DEPTH to a binary pointer flips its top bit. In Gray code,
-  // the same offset flips the top two bits, including at DEPTH = 2.
+  // Adding wrap bit to a binary pointer MSB. 
+  // In Gray code, the same offset flips the top two bits.
   localparam [PTR_WIDTH-1:0] FULL_MASK = {2'b11, {(ADDR_WIDTH-1){1'b0}}};
 
   reg [WIDTH-1:0] mem [0:DEPTH-1];
@@ -27,6 +27,7 @@ module fifo_async #(
   reg [PTR_WIDTH-1:0] rd_ptr_bin, rd_ptr_gray;
 
   reg [1:0] wr_rst_pipe, rd_rst_pipe;
+  // 2-flop synchronizer to sync pointers.
   reg [PTR_WIDTH-1:0] rd_ptr_gray_meta, rd_ptr_gray_sync;
   reg [PTR_WIDTH-1:0] wr_ptr_gray_meta, wr_ptr_gray_sync;
 
