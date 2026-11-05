@@ -6,7 +6,7 @@ module fifo_async #(
 ) (
   input  wire             wr_clk,
   input  wire             rd_clk,
-  input  wire             rst,
+  input  wire             rst, // Active-high, asynchronous assertion, synchronous release
   input  wire             wr,
   input  wire             rd,
   input  wire [WIDTH-1:0] din,
@@ -39,8 +39,6 @@ module fifo_async #(
   wire [PTR_WIDTH-1:0] wr_ptr_gray_next = (wr_ptr_bin_next >> 1) ^ wr_ptr_bin_next;
   wire [PTR_WIDTH-1:0] rd_ptr_gray_next = (rd_ptr_bin_next >> 1) ^ rd_ptr_bin_next;
 
-  // Reset asserts in both domains even when one clock is stopped.
-  // Each domain releases reset on its own clock.
   always @(posedge wr_clk or posedge rst) begin
     if (rst) wr_rst_pipe <= '1;
     else     wr_rst_pipe <= {wr_rst_pipe[0], 1'b0};
@@ -51,6 +49,7 @@ module fifo_async #(
     else     rd_rst_pipe <= {rd_rst_pipe[0], 1'b0};
   end
 
+  // Write clock domain:
   always @(posedge wr_clk or posedge wr_rst) begin
     if (wr_rst) begin
       rd_ptr_gray_meta <= '0;
@@ -65,8 +64,13 @@ module fifo_async #(
       wr_ptr_gray <= wr_ptr_gray_next;
       full <= (wr_ptr_gray_next == (rd_ptr_gray_sync ^ FULL_MASK));
     end
+
+    if (wr_take) begin
+      mem[wr_ptr_bin[ADDR_WIDTH-1:0]] <= din;
+    end
   end
 
+  // Read clock domain:
   always @(posedge rd_clk or posedge rd_rst) begin
     if (rd_rst) begin
       wr_ptr_gray_meta <= '0;
@@ -81,14 +85,10 @@ module fifo_async #(
       rd_ptr_gray <= rd_ptr_gray_next;
       empty <= (rd_ptr_gray_next == wr_ptr_gray_sync);
     end
-  end
 
-  always @(posedge wr_clk) begin
-    if (wr_take) mem[wr_ptr_bin[ADDR_WIDTH-1:0]] <= din;
-  end
-
-  always @(posedge rd_clk) begin
-    if (rd_take) dout <= mem[rd_ptr_bin[ADDR_WIDTH-1:0]];
+    if (rd_take) begin
+      dout <= mem[rd_ptr_bin[ADDR_WIDTH-1:0]];
+    end
   end
 
 `ifndef SYNTHESIS
