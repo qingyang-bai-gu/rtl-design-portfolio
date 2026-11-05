@@ -56,7 +56,7 @@ module tb_fifo_async #(
       $fatal(1, "Read %0d: expected %h, got %h", reads, expected_dout, dout);
   end
 
-  task automatic reset_fifo;
+  task automatic pulse_rst;
     #1 rst = 1;
     #1;
     if (full !== 1'b0 || empty !== 1'b1)
@@ -64,7 +64,7 @@ module tb_fifo_async #(
     #1 rst = 0;
   endtask
 
-  task automatic wait_for_reset_release;
+  task automatic wait_for_rst_release;
     fork
       repeat (3) @(negedge wr_clk);
       repeat (3) @(negedge rd_clk);
@@ -89,8 +89,8 @@ module tb_fifo_async #(
   endtask
 
   initial begin
-    reset_fifo();
-    wait_for_reset_release();
+    pulse_rst();
+    wait_for_rst_release();
     read_cycles(3);
     if (reads != 0 || empty !== 1'b1) $fatal(1, "Read accepted while empty");
 
@@ -113,9 +113,9 @@ module tb_fifo_async #(
     wait (empty === 1'b0);
     @(negedge rd_clk);
     rd_clk_run = 0;
-    reset_fifo();
+    pulse_rst();
     rd_clk_run = 1;
-    wait_for_reset_release();
+    wait_for_rst_release();
     read_cycles(3);
     if (reads != 0 || empty !== 1'b1) $fatal(1, "Reset did not flush the FIFO");
 

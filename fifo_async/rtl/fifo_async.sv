@@ -23,72 +23,72 @@ module fifo_async #(
   localparam [PTR_WIDTH-1:0] FULL_MASK = {2'b11, {(ADDR_WIDTH-1){1'b0}}};
 
   reg [WIDTH-1:0] mem [0:DEPTH-1];
-  reg [PTR_WIDTH-1:0] wr_ptr, wr_gray;
-  reg [PTR_WIDTH-1:0] rd_ptr, rd_gray;
+  reg [PTR_WIDTH-1:0] wr_ptr_bin, wr_ptr_gray;
+  reg [PTR_WIDTH-1:0] rd_ptr_bin, rd_ptr_gray;
 
-  (* ASYNC_REG = "TRUE" *) reg [1:0] wr_reset_pipe, rd_reset_pipe;
-  (* ASYNC_REG = "TRUE" *) reg [PTR_WIDTH-1:0] rd_gray_meta, rd_gray_sync;
-  (* ASYNC_REG = "TRUE" *) reg [PTR_WIDTH-1:0] wr_gray_meta, wr_gray_sync;
+  reg [1:0] wr_rst_pipe, rd_rst_pipe;
+  reg [PTR_WIDTH-1:0] rd_ptr_gray_meta, rd_ptr_gray_sync;
+  reg [PTR_WIDTH-1:0] wr_ptr_gray_meta, wr_ptr_gray_sync;
 
-  wire wr_reset = wr_reset_pipe[1];
-  wire rd_reset = rd_reset_pipe[1];
-  wire wr_take = wr && !full && !wr_reset;
-  wire rd_take = rd && !empty && !rd_reset;
-  wire [PTR_WIDTH-1:0] wr_ptr_next = wr_ptr + PTR_WIDTH'(wr_take);
-  wire [PTR_WIDTH-1:0] rd_ptr_next = rd_ptr + PTR_WIDTH'(rd_take);
-  wire [PTR_WIDTH-1:0] wr_gray_next = (wr_ptr_next >> 1) ^ wr_ptr_next;
-  wire [PTR_WIDTH-1:0] rd_gray_next = (rd_ptr_next >> 1) ^ rd_ptr_next;
+  wire wr_rst = wr_rst_pipe[1];
+  wire rd_rst = rd_rst_pipe[1];
+  wire wr_take = wr && !full && !wr_rst;
+  wire rd_take = rd && !empty && !rd_rst;
+  wire [PTR_WIDTH-1:0] wr_ptr_bin_next = wr_ptr_bin + PTR_WIDTH'(wr_take);
+  wire [PTR_WIDTH-1:0] rd_ptr_bin_next = rd_ptr_bin + PTR_WIDTH'(rd_take);
+  wire [PTR_WIDTH-1:0] wr_ptr_gray_next = (wr_ptr_bin_next >> 1) ^ wr_ptr_bin_next;
+  wire [PTR_WIDTH-1:0] rd_ptr_gray_next = (rd_ptr_bin_next >> 1) ^ rd_ptr_bin_next;
 
   // Reset asserts in both domains even when one clock is stopped.
   // Each domain releases reset on its own clock.
   always @(posedge wr_clk or posedge rst) begin
-    if (rst) wr_reset_pipe <= '1;
-    else     wr_reset_pipe <= {wr_reset_pipe[0], 1'b0};
+    if (rst) wr_rst_pipe <= '1;
+    else     wr_rst_pipe <= {wr_rst_pipe[0], 1'b0};
   end
 
   always @(posedge rd_clk or posedge rst) begin
-    if (rst) rd_reset_pipe <= '1;
-    else     rd_reset_pipe <= {rd_reset_pipe[0], 1'b0};
+    if (rst) rd_rst_pipe <= '1;
+    else     rd_rst_pipe <= {rd_rst_pipe[0], 1'b0};
   end
 
-  always @(posedge wr_clk or posedge wr_reset) begin
-    if (wr_reset) begin
-      rd_gray_meta <= '0;
-      rd_gray_sync <= '0;
-      wr_ptr <= '0;
-      wr_gray <= '0;
+  always @(posedge wr_clk or posedge wr_rst) begin
+    if (wr_rst) begin
+      rd_ptr_gray_meta <= '0;
+      rd_ptr_gray_sync <= '0;
+      wr_ptr_bin <= '0;
+      wr_ptr_gray <= '0;
       full <= 1'b0;
     end else begin
-      rd_gray_meta <= rd_gray;
-      rd_gray_sync <= rd_gray_meta;
-      wr_ptr <= wr_ptr_next;
-      wr_gray <= wr_gray_next;
-      full <= (wr_gray_next == (rd_gray_sync ^ FULL_MASK));
+      rd_ptr_gray_meta <= rd_ptr_gray;
+      rd_ptr_gray_sync <= rd_ptr_gray_meta;
+      wr_ptr_bin <= wr_ptr_bin_next;
+      wr_ptr_gray <= wr_ptr_gray_next;
+      full <= (wr_ptr_gray_next == (rd_ptr_gray_sync ^ FULL_MASK));
     end
   end
 
-  always @(posedge rd_clk or posedge rd_reset) begin
-    if (rd_reset) begin
-      wr_gray_meta <= '0;
-      wr_gray_sync <= '0;
-      rd_ptr <= '0;
-      rd_gray <= '0;
+  always @(posedge rd_clk or posedge rd_rst) begin
+    if (rd_rst) begin
+      wr_ptr_gray_meta <= '0;
+      wr_ptr_gray_sync <= '0;
+      rd_ptr_bin <= '0;
+      rd_ptr_gray <= '0;
       empty <= 1'b1;
     end else begin
-      wr_gray_meta <= wr_gray;
-      wr_gray_sync <= wr_gray_meta;
-      rd_ptr <= rd_ptr_next;
-      rd_gray <= rd_gray_next;
-      empty <= (rd_gray_next == wr_gray_sync);
+      wr_ptr_gray_meta <= wr_ptr_gray;
+      wr_ptr_gray_sync <= wr_ptr_gray_meta;
+      rd_ptr_bin <= rd_ptr_bin_next;
+      rd_ptr_gray <= rd_ptr_gray_next;
+      empty <= (rd_ptr_gray_next == wr_ptr_gray_sync);
     end
   end
 
   always @(posedge wr_clk) begin
-    if (wr_take) mem[wr_ptr[ADDR_WIDTH-1:0]] <= din;
+    if (wr_take) mem[wr_ptr_bin[ADDR_WIDTH-1:0]] <= din;
   end
 
   always @(posedge rd_clk) begin
-    if (rd_take) dout <= mem[rd_ptr[ADDR_WIDTH-1:0]];
+    if (rd_take) dout <= mem[rd_ptr_bin[ADDR_WIDTH-1:0]];
   end
 
 `ifndef SYNTHESIS
